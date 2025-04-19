@@ -320,6 +320,32 @@ return [
                 ],
             ],
         ],
+        [
+            'text'    => 'Manajemen Komoditas',
+            'icon'    => 'fas fa-fish',
+            'submenu' => [
+                [
+                    'text' => 'Jenis Komoditas',
+                    'url'  => 'admin/komoditas',
+                    'icon' => 'fas fa-list',
+                ],
+                [
+                    'text' => 'Tebar Bibit',
+                    'url'  => 'admin/tebar-bibit',
+                    'icon' => 'fas fa-seedling',
+                ],
+                [
+                    'text' => 'Monitoring Pertumbuhan',
+                    'url'  => 'admin/monitoring',
+                    'icon' => 'fas fa-chart-line',
+                ],
+                [
+                    'text' => 'Penyakit & Pengobatan',
+                    'url'  => 'admin/penyakit',
+                    'icon' => 'fas fa-medkit',
+                ],
+            ],
+        ],
         // Menu lainnya...
     ],
 
