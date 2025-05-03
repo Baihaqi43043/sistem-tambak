@@ -305,47 +305,36 @@ return [
             'icon' => 'fas fa-fw fa-tachometer-alt',
         ],
         [
-            'text'    => 'Manajemen Tambak',
-            'icon'    => 'fas fa-fw fa-water',
-            'submenu' => [
-                [
-                    'text' => 'Daftar Tambak',
-                    'url'  => 'admin/tambak',
-                    'icon' => 'fas fa-fw fa-list',
-                ],
-                [
-                    'text' => 'Tambah Tambak',
-                    'url'  => 'admin/tambak/create',
-                    'icon' => 'fas fa-fw fa-plus',
-                ],
-            ],
+            'text' => 'Daftar Petambak',
+            'url'  => 'petambak',
+            'icon' => 'fas fa-users',
         ],
         [
-            'text'    => 'Manajemen Komoditas',
-            'icon'    => 'fas fa-fish',
-            'submenu' => [
-                [
-                    'text' => 'Jenis Komoditas',
-                    'url'  => 'admin/komoditas',
-                    'icon' => 'fas fa-list',
-                ],
-                [
-                    'text' => 'Tebar Bibit',
-                    'url'  => 'admin/tebar-bibit',
-                    'icon' => 'fas fa-seedling',
-                ],
-                [
-                    'text' => 'Monitoring Pertumbuhan',
-                    'url'  => 'admin/monitoring',
-                    'icon' => 'fas fa-chart-line',
-                ],
-                [
-                    'text' => 'Penyakit & Pengobatan',
-                    'url'  => 'admin/penyakit',
-                    'icon' => 'fas fa-medkit',
-                ],
-            ],
+            'text' => 'Daftar Tambak',
+            'url'  => 'tambak',
+            'icon' => 'fas fa-clipboard-list',
         ],
+        [
+            'text' => 'Siklus',
+            'url'  => 'siklus',
+            'icon' => 'fas fa-list-alt',
+        ],
+        [
+            'text' => 'Panen',
+            'url'  => 'panen',
+            'icon' => 'fas fa-fish', // Ikon ikan, sesuai untuk hasil panen tambak
+        ],
+        [
+            'text' => 'Kategori Biaya',
+            'url'  => 'kategori-biaya',
+            'icon' => 'fas fa-tags', // Ikon tag/label untuk kategori
+        ],
+        [
+            'text' => 'Pengeluaran',
+            'url'  => 'biaya',
+            'icon' => 'fas fa-money-bill-wave', // Ikon uang untuk pengeluaran
+        ],
+
         // Menu lainnya...
     ],
 

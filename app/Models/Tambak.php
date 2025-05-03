@@ -3,44 +3,61 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Tambak extends Model
 {
-    use SoftDeletes;
+    /**
+     * Primary key
+     */
+    protected $primaryKey = 'id_tambak';
 
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array<int, string>
+     */
     protected $fillable = [
-        'nama',
+        'id_petambak',
+        'nama_tambak',
         'lokasi',
-        'luas',
-        'jenis',
+        'luas_area',
+        'kedalaman',
         'tanggal_pembuatan',
         'status',
-        'keterangan',
     ];
 
-    protected $dates = [
-        'tanggal_pembuatan',
-        'deleted_at',
+    /**
+     * The attributes that should be cast.
+     *
+     * @var array<string, string>
+     */
+    protected $casts = [
+        'tanggal_pembuatan' => 'date',
+        'luas_area' => 'decimal:2',
+        'kedalaman' => 'decimal:2',
     ];
 
-    public function user()
+    /**
+     * Get the petambak that owns the tambak.
+     */
+    public function petambak()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(Petambak::class, 'id_petambak');
     }
 
-    public function kolams()
+    /**
+     * Get the siklus budidaya for the tambak.
+     */
+    public function siklusBudidayas()
     {
-        return $this->hasMany(Kolam::class);
+        return $this->hasMany(SiklusBudidaya::class, 'id_tambak');
     }
 
-    public function karyawans()
+    /**
+     * Set the route key name for the model.
+     */
+    public function getRouteKeyName()
     {
-        return $this->hasMany(Karyawan::class);
-    }
-
-    public function asets()
-    {
-        return $this->hasMany(Aset::class);
+        return 'id_tambak';
     }
 }
